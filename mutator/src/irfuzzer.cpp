@@ -35,6 +35,8 @@
 #include "llvm/IR/Verifier.h"
 #include "llvm/Transforms/Utils/Cloning.h"
 #endif
+#include "llvm/Support/ErrorMacro.h"
+
 using namespace llvm;
 
 static std::unique_ptr<IRMutator> Mutator;
@@ -68,18 +70,30 @@ std::vector<TypeGetter> getDefaultAllowedTypes() {
 
 extern "C" {
 
-void dumpOnFailure(unsigned int Seed, uint8_t *Data, size_t Size,
-                   size_t MaxSize) {
-  time_t seconds = time(NULL);
-  errs() << "Mutation failed, seed: " << Seed << "\n";
-  char oldname[256];
-  memset(oldname, 0, 256);
-  sprintf(oldname, "%u-%zu-%zu.old.bc", Seed, MaxSize, seconds);
-  std::ofstream oldoutfile =
-      std::ofstream(oldname, std::ios::out | std::ios::binary);
-  oldoutfile.write((char *)Data, Size);
+#define dump_on_failure(NAME)\
+  time_t seconds = time(NULL);\
+  errs() << "Mutation failed, seed: " << Seed << "\n";\
+  char oldname[256];\
+  memset(oldname, 0, 256);\
+  sprintf(oldname, NAME "/%u-%zu-%zu.old.bc", Seed, MaxSize, seconds);\
+  std::ofstream oldoutfile =\
+      std::ofstream(oldname, std::ios::out | std::ios::binary);\
+  oldoutfile.write((char *)Data, Size);\
   oldoutfile.close();
-}
+#define fail_fn(FNNAME, NAME)\
+  void FNNAME(unsigned int Seed, uint8_t *Data, size_t Size,\
+                     size_t MaxSize) {\
+    dump_on_failure(NAME);\
+  }
+fail_fn(dumpOnFailure, "mutator");
+fail_fn(dumpOnFailureReader, "reader");
+fail_fn(dumpOnFailureWriter, "writer");
+fail_fn(dumpOnFailureReaderPost, "readerpost");
+fail_fn(dumpOnFailureCatch, "catch");
+fail_fn(dumpOnFailureVerify, "verify");
+fail_fn(dumpOnFailureVerifyPost, "verifypost");
+#undef fail_fn
+#undef dump_on_failure
 
 /// TODO:
 /// Type* getStructType(Context& C);
@@ -115,6 +129,12 @@ void createISelMutator() {
                                         std::move(Strategies));
 }
 
+#define error(FN)\
+  FN(Seed, Data, Size, MaxSize);\
+  return Size;
+#define nonlocal(STMT, FN) if (!::setjmp(jmpbuf)) { STMT ; } else { error(FN) }
+#define local(COND, FN) if ((COND)) { error(FN) }
+
 size_t LLVMFuzzerCustomMutator(uint8_t *Data, size_t Size, size_t MaxSize,
                                unsigned int Seed) {
   LLVMContext Context;
@@ -123,7 +143,7 @@ size_t LLVMFuzzerCustomMutator(uint8_t *Data, size_t Size, size_t MaxSize,
     // We get bogus data given an empty corpus - just create a new module.
     M.reset(new Module("M", Context));
   else
-    M = parseModule(Data, Size, Context);
+    nonlocal(M = parseModule(Data, Size, Context), dumpOnFailureReader);
   if (!M) {
     errs() << "Parse module error. No mutation is done. Data size: " << Size
            << ". Given data wrote to err.bc\n";
@@ -148,30 +168,32 @@ size_t LLVMFuzzerCustomMutator(uint8_t *Data, size_t Size, size_t MaxSize,
     srand(Seed);
     Seed = rand();
     // for (int i = 0; i < 4; i++) {
-    Mutator->mutateModule(*M, Seed, MaxSize);
+    nonlocal(local(verifyModule(*M), dumpOnFailureVerify), dumpOnFailureVerify);
+    nonlocal(Mutator->mutateModule(*M, Seed, MaxSize), dumpOnFailure);
+    nonlocal(local(verifyModule(*M), dumpOnFailureVerifyPost), dumpOnFailureVerifyPost);
     // }
 #ifdef DEBUG
   } catch (...) {
-    dumpOnFailure(Seed, Data, Size, MaxSize);
+    dumpOnFailureCatch(Seed, Data, Size, MaxSize);
     return Size;
   }
 #endif
 
 #ifdef DEBUG
   uint8_t NewData[MaxSize];
-  size_t NewSize = writeModule(*M, NewData, MaxSize);
+  size_t NewSize;
   LLVMContext NewC;
-  auto NewM = parseModule(NewData, NewSize, NewC);
-  if (NewM == nullptr) {
-    dumpOnFailure(Seed, Data, Size, MaxSize);
-    return Size;
-  } else {
+  std::unique_ptr<Module> NewM;
+  nonlocal(NewSize = writeModule(*M, NewData, MaxSize), dumpOnFailureWriter);
+  nonlocal(NewM = parseModule(NewData, NewSize, NewC), dumpOnFailureReaderPost);
+  local(NewM == nullptr, dumpOnFailure)
+  else {
     memset(Data, 0, MaxSize);
     memcpy(Data, NewData, NewSize);
     return NewSize;
   }
 #else
-  return writeModule(*M, Data, MaxSize);
+  nonlocal(return writeModule(*M, Data, MaxSize), dumpOnFailureWriter);
 #endif
 }
 }

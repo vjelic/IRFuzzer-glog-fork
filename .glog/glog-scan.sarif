@@ -1,0 +1,81 @@
+{
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Glog.AI",
+          "organization": "Glog.AI",
+          "fullName": "Glog, Making software more secure",
+          "version": "1.0.0",
+          "semanticVersion": "1.0.0",
+          "informationUri": "https://www.glog.ai",
+          "rules": [
+            {
+              "id": "glog-653472f1-9d09-47af-b9b5-e55b695d4a1a",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\nThe `shell=True` subprocess call security vulnerability in Python occurs when a program allows for the execution of shell commands that can be manipulated to execute arbitrary commands. This is a serious security vulnerability as it can lead to remote code execution (RCE) if an attacker is able to inject malicious commands.\n\nIn the provided code snippet, there is no direct vulnerability as the `sleep(1)` command does not use `shell=True` and does not take any user input. However, if the command was modified to take user input or use `shell=True`, it could potentially be exploited.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, avoid using `shell=True` in subprocess calls whenever possible. If shell functionality is required, ensure that user input is properly sanitized and validated to prevent command injection. \n\n## Source Code Fix Recommendation\n\nInstead of using `shell=True`, use a list of arguments for the subprocess call. For example, instead of:\n\n```python\nimport subprocess\nsubprocess.call(\"sleep 1\", shell=True)\n```\n\nUse:\n\n```python\nimport subprocess\nsubprocess.call([\"sleep\", \"1\"])\n```\n\n## Library Dependencies\n\nThe provided code example requires the `subprocess` library which is a standard library in Python and does not need to be installed separately.\n\n## References\n\n- [OWASP Command Injection](https://owasp.org/www-community/attacks/Command_Injection)\n- [CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')](https://cwe.mitre.org/data/definitions/78.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B602"
+                ]
+              }
+            }
+          ],
+          "language": "en-US",
+          "contents": [
+            "localizedData",
+            "nonLocalizedData"
+          ],
+          "isComprehensive": false
+        }
+      },
+      "language": "en-US",
+      "results": [
+        {
+          "ruleId": "glog-653472f1-9d09-47af-b9b5-e55b695d4a1a",
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "\"Shell=True Subprocess Call Security Vulnerability Detected\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/fuzz.py"
+                },
+                "region": {
+                  "startLine": 355,
+                  "startColumn": 19,
+                  "endLine": 356,
+                  "endColumn": 10,
+                  "snippet": {
+                    "text": "        sleep(1)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 357,
+                  "endLine": 365,
+                  "snippet": {
+                    "text": "            env={**os.environ, **env},\n            shell=True,\n            stdin=subprocess.PIPE,\n            stdout=subprocess.DEVNULL,\n        )\n\n        # Sleep for 1s so aflplusplus has time to bind core. Otherwise two fuzzers may bind to the same core.\n        sleep(1)\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "HIGH",
+            "issue_confidence": "HIGH"
+          }
+        }
+      ],
+      "newlineSequences": [
+        "\r\n",
+        "\n"
+      ]
+    }
+  ]
+}

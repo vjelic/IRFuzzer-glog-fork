@@ -12,30 +12,6 @@
           "informationUri": "https://www.glog.ai",
           "rules": [
             {
-              "id": "ce0b62db-c43d-3e5c-a578-6a8c70bb772c",
-              "name": "resources.rules.use-workdir",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.use-workdir"
-              },
-              "fullDescription": {
-                "text": "Use 'WORKDIR' instead of 'RUN cd ...'. Using 'RUN cd ...' may not work as expected in a conatiner."
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "Use 'WORKDIR' instead of 'RUN cd ...'. Using 'RUN cd ...' may not work as expected in a conatiner.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Use 'WORKDIR' instead of 'RUN cd ...'. Using 'RUN cd ...' may not work as expected in a conatiner.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/hadolint/hadolint/wiki/DL3003](https://github.com/hadolint/hadolint/wiki/DL3003)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.use-workdir"
-                ]
-              }
-            },
-            {
               "id": "40e669e9-7173-315f-aa6b-e68c507b8ee1",
               "name": "resources.rules.use-workdir",
               "shortDescription": {
@@ -61,6 +37,30 @@
             },
             {
               "id": "bfea9e5c-8243-3c3f-a376-c077f4b255b0",
+              "name": "resources.rules.use-workdir",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.use-workdir"
+              },
+              "fullDescription": {
+                "text": "Use 'WORKDIR' instead of 'RUN cd ...'. Using 'RUN cd ...' may not work as expected in a conatiner."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "Use 'WORKDIR' instead of 'RUN cd ...'. Using 'RUN cd ...' may not work as expected in a conatiner.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Use 'WORKDIR' instead of 'RUN cd ...'. Using 'RUN cd ...' may not work as expected in a conatiner.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/hadolint/hadolint/wiki/DL3003](https://github.com/hadolint/hadolint/wiki/DL3003)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.use-workdir"
+                ]
+              }
+            },
+            {
+              "id": "ce0b62db-c43d-3e5c-a578-6a8c70bb772c",
               "name": "resources.rules.use-workdir",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.use-workdir"
@@ -156,6 +156,30 @@
               }
             },
             {
+              "id": "3b4d70e2-fb7c-33fd-9e17-a94ae1a1ad1a",
+              "name": "resources.rules.raptor-integer-truncation",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.raptor-integer-truncation"
+              },
+              "fullDescription": {
+                "text": "Truncation errors occur when a primitive is cast to a primitive of a  smaller size and data is lost in the conversion. The value cannot be  trusted and the application will be in an undefined state."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "Truncation errors occur when a primitive is cast to a primitive of a  smaller size and data is lost in the conversion. The value cannot be  trusted and the application will be in an undefined state.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Truncation errors occur when a primitive is cast to a primitive of a  smaller size and data is lost in the conversion. The value cannot be  trusted and the application will be in an undefined state.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://cwe.mitre.org/data/definitions/197](https://cwe.mitre.org/data/definitions/197)\n - [https://cwe.mitre.org/data/definitions/681](https://cwe.mitre.org/data/definitions/681)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://github.com/struct/mms](https://github.com/struct/mms)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.raptor-integer-truncation"
+                ]
+              }
+            },
+            {
               "id": "779fab94-fe24-324e-925f-1f9bebe0b034",
               "name": "resources.rules.raptor-signed-unsigned-conversion",
               "shortDescription": {
@@ -180,26 +204,26 @@
               }
             },
             {
-              "id": "3b4d70e2-fb7c-33fd-9e17-a94ae1a1ad1a",
-              "name": "resources.rules.raptor-integer-truncation",
+              "id": "75f7a30b-ffe5-3b9c-8526-f3cbaa53b573",
+              "name": "resources.rules.raptor-interesting-api-calls",
               "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.raptor-integer-truncation"
+                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
               },
               "fullDescription": {
-                "text": "Truncation errors occur when a primitive is cast to a primitive of a  smaller size and data is lost in the conversion. The value cannot be  trusted and the application will be in an undefined state."
+                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
               },
               "defaultConfiguration": {
                 "enabled": true,
                 "level": "warning"
               },
               "help": {
-                "text": "Truncation errors occur when a primitive is cast to a primitive of a  smaller size and data is lost in the conversion. The value cannot be  trusted and the application will be in an undefined state.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Truncation errors occur when a primitive is cast to a primitive of a  smaller size and data is lost in the conversion. The value cannot be  trusted and the application will be in an undefined state.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://cwe.mitre.org/data/definitions/197](https://cwe.mitre.org/data/definitions/197)\n - [https://cwe.mitre.org/data/definitions/681](https://cwe.mitre.org/data/definitions/681)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://github.com/struct/mms](https://github.com/struct/mms)\n"
+                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
               },
               "properties": {
                 "precision": "very-high",
                 "tags": [
-                  "resources.rules.raptor-integer-truncation"
+                  "resources.rules.raptor-interesting-api-calls"
                 ]
               }
             },
@@ -252,30 +276,6 @@
               }
             },
             {
-              "id": "75f7a30b-ffe5-3b9c-8526-f3cbaa53b573",
-              "name": "resources.rules.raptor-interesting-api-calls",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
-              },
-              "fullDescription": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.raptor-interesting-api-calls"
-                ]
-              }
-            },
-            {
               "id": "00baedf9-6795-3089-af62-b2afd80e6a82",
               "name": "resources.rules.raptor-interesting-api-calls",
               "shortDescription": {
@@ -300,7 +300,7 @@
               }
             },
             {
-              "id": "7e07bb5e-08d6-3a9e-8542-e64baf6dd16c",
+              "id": "e499f635-a8c3-3259-b42d-1b61a49773fb",
               "name": "resources.rules.raptor-interesting-api-calls",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
@@ -348,26 +348,26 @@
               }
             },
             {
-              "id": "9b276a96-24e2-301c-9350-b56975553f23",
-              "name": "resources.rules.raptor-insecure-api-atoi-atol-atof",
+              "id": "7e07bb5e-08d6-3a9e-8542-e64baf6dd16c",
+              "name": "resources.rules.raptor-interesting-api-calls",
               "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.raptor-insecure-api-atoi-atol-atof"
+                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
               },
               "fullDescription": {
-                "text": "The atoi(), atol(), atof(), and similar functions don't handle errors. They don't check for integer overflow and can return a negative value.  They have undefined behavior if the value of the result cannot be  represented. They return 0 (or 0.0) if the string does not represent  an integer (or decimal), which is indistinguishable from a correctly  formatted, zero-denoting input string."
+                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
               },
               "defaultConfiguration": {
                 "enabled": true,
-                "level": "note"
+                "level": "warning"
               },
               "help": {
-                "text": "The atoi(), atol(), atof(), and similar functions don't handle errors. They don't check for integer overflow and can return a negative value.  They have undefined behavior if the value of the result cannot be  represented. They return 0 (or 0.0) if the string does not represent  an integer (or decimal), which is indistinguishable from a correctly  formatted, zero-denoting input string.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "The atoi(), atol(), atof(), and similar functions don't handle errors. They don't check for integer overflow and can return a negative value.  They have undefined behavior if the value of the result cannot be  represented. They return 0 (or 0.0) if the string does not represent  an integer (or decimal), which is indistinguishable from a correctly  formatted, zero-denoting input string.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://rules.sonarsource.com/c/type/Bug/RSPEC-989](https://rules.sonarsource.com/c/type/Bug/RSPEC-989)\n - [https://wiki.sei.cmu.edu/confluence/display/c/ERR34-C.+Detect+errors+when+converting+a+string+to+a+number](https://wiki.sei.cmu.edu/confluence/display/c/ERR34-C.+Detect+errors+when+converting+a+string+to+a+number)\n"
+                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
               },
               "properties": {
                 "precision": "very-high",
                 "tags": [
-                  "resources.rules.raptor-insecure-api-atoi-atol-atof"
+                  "resources.rules.raptor-interesting-api-calls"
                 ]
               }
             },
@@ -396,26 +396,26 @@
               }
             },
             {
-              "id": "e499f635-a8c3-3259-b42d-1b61a49773fb",
-              "name": "resources.rules.raptor-interesting-api-calls",
+              "id": "9b276a96-24e2-301c-9350-b56975553f23",
+              "name": "resources.rules.raptor-insecure-api-atoi-atol-atof",
               "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
+                "text": "Opengrep Finding: resources.rules.raptor-insecure-api-atoi-atol-atof"
               },
               "fullDescription": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
+                "text": "The atoi(), atol(), atof(), and similar functions don't handle errors. They don't check for integer overflow and can return a negative value.  They have undefined behavior if the value of the result cannot be  represented. They return 0 (or 0.0) if the string does not represent  an integer (or decimal), which is indistinguishable from a correctly  formatted, zero-denoting input string."
               },
               "defaultConfiguration": {
                 "enabled": true,
-                "level": "warning"
+                "level": "note"
               },
               "help": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
+                "text": "The atoi(), atol(), atof(), and similar functions don't handle errors. They don't check for integer overflow and can return a negative value.  They have undefined behavior if the value of the result cannot be  represented. They return 0 (or 0.0) if the string does not represent  an integer (or decimal), which is indistinguishable from a correctly  formatted, zero-denoting input string.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "The atoi(), atol(), atof(), and similar functions don't handle errors. They don't check for integer overflow and can return a negative value.  They have undefined behavior if the value of the result cannot be  represented. They return 0 (or 0.0) if the string does not represent  an integer (or decimal), which is indistinguishable from a correctly  formatted, zero-denoting input string.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://rules.sonarsource.com/c/type/Bug/RSPEC-989](https://rules.sonarsource.com/c/type/Bug/RSPEC-989)\n - [https://wiki.sei.cmu.edu/confluence/display/c/ERR34-C.+Detect+errors+when+converting+a+string+to+a+number](https://wiki.sei.cmu.edu/confluence/display/c/ERR34-C.+Detect+errors+when+converting+a+string+to+a+number)\n"
               },
               "properties": {
                 "precision": "very-high",
                 "tags": [
-                  "resources.rules.raptor-interesting-api-calls"
+                  "resources.rules.raptor-insecure-api-atoi-atol-atof"
                 ]
               }
             },
@@ -468,6 +468,30 @@
               }
             },
             {
+              "id": "69e68de7-20ae-37fd-96ac-5c701762a1b1",
+              "name": "resources.rules.raptor-interesting-api-calls",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
+              },
+              "fullDescription": {
+                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.raptor-interesting-api-calls"
+                ]
+              }
+            },
+            {
               "id": "6a9e5457-16be-3809-8651-b5b0b841fa47",
               "name": "resources.rules.raptor-interesting-api-calls",
               "shortDescription": {
@@ -492,26 +516,26 @@
               }
             },
             {
-              "id": "69e68de7-20ae-37fd-96ac-5c701762a1b1",
-              "name": "resources.rules.raptor-interesting-api-calls",
+              "id": "c4533ad4-2bce-3be6-b2c8-3ac9bcb7fae8",
+              "name": "resources.rules.raptor-insecure-api-atoi-atol-atof",
               "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
+                "text": "Opengrep Finding: resources.rules.raptor-insecure-api-atoi-atol-atof"
               },
               "fullDescription": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
+                "text": "The atoi(), atol(), atof(), and similar functions don't handle errors. They don't check for integer overflow and can return a negative value.  They have undefined behavior if the value of the result cannot be  represented. They return 0 (or 0.0) if the string does not represent  an integer (or decimal), which is indistinguishable from a correctly  formatted, zero-denoting input string."
               },
               "defaultConfiguration": {
                 "enabled": true,
-                "level": "warning"
+                "level": "note"
               },
               "help": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
+                "text": "The atoi(), atol(), atof(), and similar functions don't handle errors. They don't check for integer overflow and can return a negative value.  They have undefined behavior if the value of the result cannot be  represented. They return 0 (or 0.0) if the string does not represent  an integer (or decimal), which is indistinguishable from a correctly  formatted, zero-denoting input string.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "The atoi(), atol(), atof(), and similar functions don't handle errors. They don't check for integer overflow and can return a negative value.  They have undefined behavior if the value of the result cannot be  represented. They return 0 (or 0.0) if the string does not represent  an integer (or decimal), which is indistinguishable from a correctly  formatted, zero-denoting input string.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://rules.sonarsource.com/c/type/Bug/RSPEC-989](https://rules.sonarsource.com/c/type/Bug/RSPEC-989)\n - [https://wiki.sei.cmu.edu/confluence/display/c/ERR34-C.+Detect+errors+when+converting+a+string+to+a+number](https://wiki.sei.cmu.edu/confluence/display/c/ERR34-C.+Detect+errors+when+converting+a+string+to+a+number)\n"
               },
               "properties": {
                 "precision": "very-high",
                 "tags": [
-                  "resources.rules.raptor-interesting-api-calls"
+                  "resources.rules.raptor-insecure-api-atoi-atol-atof"
                 ]
               }
             },
@@ -564,30 +588,6 @@
               }
             },
             {
-              "id": "c4533ad4-2bce-3be6-b2c8-3ac9bcb7fae8",
-              "name": "resources.rules.raptor-insecure-api-atoi-atol-atof",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.raptor-insecure-api-atoi-atol-atof"
-              },
-              "fullDescription": {
-                "text": "The atoi(), atol(), atof(), and similar functions don't handle errors. They don't check for integer overflow and can return a negative value.  They have undefined behavior if the value of the result cannot be  represented. They return 0 (or 0.0) if the string does not represent  an integer (or decimal), which is indistinguishable from a correctly  formatted, zero-denoting input string."
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "note"
-              },
-              "help": {
-                "text": "The atoi(), atol(), atof(), and similar functions don't handle errors. They don't check for integer overflow and can return a negative value.  They have undefined behavior if the value of the result cannot be  represented. They return 0 (or 0.0) if the string does not represent  an integer (or decimal), which is indistinguishable from a correctly  formatted, zero-denoting input string.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "The atoi(), atol(), atof(), and similar functions don't handle errors. They don't check for integer overflow and can return a negative value.  They have undefined behavior if the value of the result cannot be  represented. They return 0 (or 0.0) if the string does not represent  an integer (or decimal), which is indistinguishable from a correctly  formatted, zero-denoting input string.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://rules.sonarsource.com/c/type/Bug/RSPEC-989](https://rules.sonarsource.com/c/type/Bug/RSPEC-989)\n - [https://wiki.sei.cmu.edu/confluence/display/c/ERR34-C.+Detect+errors+when+converting+a+string+to+a+number](https://wiki.sei.cmu.edu/confluence/display/c/ERR34-C.+Detect+errors+when+converting+a+string+to+a+number)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.raptor-insecure-api-atoi-atol-atof"
-                ]
-              }
-            },
-            {
               "id": "b418f956-0b5f-32bd-9146-66ae47792f3a",
               "name": "resources.rules.raptor-interesting-api-calls",
               "shortDescription": {
@@ -636,30 +636,6 @@
               }
             },
             {
-              "id": "bd4412d6-8420-303f-8051-ffe2c47f3078",
-              "name": "resources.rules.raptor-interesting-api-calls",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
-              },
-              "fullDescription": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.raptor-interesting-api-calls"
-                ]
-              }
-            },
-            {
               "id": "5b1a968a-e604-3929-b5a2-4b73fe2bfd31",
               "name": "resources.rules.raptor-interesting-api-calls",
               "shortDescription": {
@@ -684,31 +660,31 @@
               }
             },
             {
-              "id": "34c3427a-feda-3e1b-89e3-a53c8db88506",
-              "name": "resources.rules.raptor-insecure-api-rand-srand",
+              "id": "bd4412d6-8420-303f-8051-ffe2c47f3078",
+              "name": "resources.rules.raptor-interesting-api-calls",
               "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.raptor-insecure-api-rand-srand"
+                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
               },
               "fullDescription": {
-                "text": "The rand() PRNG should not be used in applications intended to be  portable when good randomness is needed. Instead, the use of random()  is recommended."
+                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
               },
               "defaultConfiguration": {
                 "enabled": true,
                 "level": "warning"
               },
               "help": {
-                "text": "The rand() PRNG should not be used in applications intended to be  portable when good randomness is needed. Instead, the use of random()  is recommended.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "The rand() PRNG should not be used in applications intended to be  portable when good randomness is needed. Instead, the use of random()  is recommended.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://cwe.mitre.org/data/definitions/338](https://cwe.mitre.org/data/definitions/338)\n - [https://cwe.mitre.org/data/definitions/330](https://cwe.mitre.org/data/definitions/330)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n"
+                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
               },
               "properties": {
                 "precision": "very-high",
                 "tags": [
-                  "resources.rules.raptor-insecure-api-rand-srand"
+                  "resources.rules.raptor-interesting-api-calls"
                 ]
               }
             },
             {
-              "id": "76711e88-590a-3f23-8210-9001a1077abf",
+              "id": "34c3427a-feda-3e1b-89e3-a53c8db88506",
               "name": "resources.rules.raptor-insecure-api-rand-srand",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.raptor-insecure-api-rand-srand"
@@ -776,6 +752,54 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.raptor-interesting-api-calls"
+                ]
+              }
+            },
+            {
+              "id": "76711e88-590a-3f23-8210-9001a1077abf",
+              "name": "resources.rules.raptor-insecure-api-rand-srand",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.raptor-insecure-api-rand-srand"
+              },
+              "fullDescription": {
+                "text": "The rand() PRNG should not be used in applications intended to be  portable when good randomness is needed. Instead, the use of random()  is recommended."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "The rand() PRNG should not be used in applications intended to be  portable when good randomness is needed. Instead, the use of random()  is recommended.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "The rand() PRNG should not be used in applications intended to be  portable when good randomness is needed. Instead, the use of random()  is recommended.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://cwe.mitre.org/data/definitions/338](https://cwe.mitre.org/data/definitions/338)\n - [https://cwe.mitre.org/data/definitions/330](https://cwe.mitre.org/data/definitions/330)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.raptor-insecure-api-rand-srand"
+                ]
+              }
+            },
+            {
+              "id": "d66d0ad3-f715-3641-b5f3-a8576be019d2",
+              "name": "resources.rules.raptor-insecure-api-rand-srand",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.raptor-insecure-api-rand-srand"
+              },
+              "fullDescription": {
+                "text": "The rand() PRNG should not be used in applications intended to be  portable when good randomness is needed. Instead, the use of random()  is recommended."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "The rand() PRNG should not be used in applications intended to be  portable when good randomness is needed. Instead, the use of random()  is recommended.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "The rand() PRNG should not be used in applications intended to be  portable when good randomness is needed. Instead, the use of random()  is recommended.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://cwe.mitre.org/data/definitions/338](https://cwe.mitre.org/data/definitions/338)\n - [https://cwe.mitre.org/data/definitions/330](https://cwe.mitre.org/data/definitions/330)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.raptor-insecure-api-rand-srand"
                 ]
               }
             },
@@ -852,7 +876,7 @@
               }
             },
             {
-              "id": "d66d0ad3-f715-3641-b5f3-a8576be019d2",
+              "id": "61e20618-b2d4-308b-8563-a3e9ea97f260",
               "name": "resources.rules.raptor-insecure-api-rand-srand",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.raptor-insecure-api-rand-srand"
@@ -924,26 +948,26 @@
               }
             },
             {
-              "id": "61e20618-b2d4-308b-8563-a3e9ea97f260",
-              "name": "resources.rules.raptor-insecure-api-rand-srand",
+              "id": "a3148619-3f7f-3524-97e8-807d9156f35a",
+              "name": "resources.rules.raptor-interesting-api-calls",
               "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.raptor-insecure-api-rand-srand"
+                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
               },
               "fullDescription": {
-                "text": "The rand() PRNG should not be used in applications intended to be  portable when good randomness is needed. Instead, the use of random()  is recommended."
+                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
               },
               "defaultConfiguration": {
                 "enabled": true,
                 "level": "warning"
               },
               "help": {
-                "text": "The rand() PRNG should not be used in applications intended to be  portable when good randomness is needed. Instead, the use of random()  is recommended.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "The rand() PRNG should not be used in applications intended to be  portable when good randomness is needed. Instead, the use of random()  is recommended.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://cwe.mitre.org/data/definitions/338](https://cwe.mitre.org/data/definitions/338)\n - [https://cwe.mitre.org/data/definitions/330](https://cwe.mitre.org/data/definitions/330)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n"
+                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
               },
               "properties": {
                 "precision": "very-high",
                 "tags": [
-                  "resources.rules.raptor-insecure-api-rand-srand"
+                  "resources.rules.raptor-interesting-api-calls"
                 ]
               }
             },
@@ -996,31 +1020,7 @@
               }
             },
             {
-              "id": "a3148619-3f7f-3524-97e8-807d9156f35a",
-              "name": "resources.rules.raptor-interesting-api-calls",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
-              },
-              "fullDescription": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.raptor-interesting-api-calls"
-                ]
-              }
-            },
-            {
-              "id": "31e416a9-237d-37b9-bd35-920f645531b1",
+              "id": "2b168f9f-e73c-3e0d-9df9-b94323e170fd",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -1044,7 +1044,7 @@
               }
             },
             {
-              "id": "2b168f9f-e73c-3e0d-9df9-b94323e170fd",
+              "id": "31e416a9-237d-37b9-bd35-920f645531b1",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -1092,7 +1092,7 @@
               }
             },
             {
-              "id": "b0a1c40f-85c7-3ae7-bdd4-bc3b2b494f59",
+              "id": "355d76af-49e3-3fa2-ba26-1f55e02e32e9",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -1116,7 +1116,7 @@
               }
             },
             {
-              "id": "355d76af-49e3-3fa2-ba26-1f55e02e32e9",
+              "id": "b0a1c40f-85c7-3ae7-bdd4-bc3b2b494f59",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -1188,55 +1188,7 @@
               }
             },
             {
-              "id": "df2355f1-daaf-335d-9f59-7e482cb524fa",
-              "name": "resources.rules.dlint-catastrophic-redos",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
-              },
-              "fullDescription": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dlint-catastrophic-redos"
-                ]
-              }
-            },
-            {
               "id": "91dd3b72-df9a-34cf-be09-ccf403a55939",
-              "name": "resources.rules.dlint-catastrophic-redos",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
-              },
-              "fullDescription": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dlint-catastrophic-redos"
-                ]
-              }
-            },
-            {
-              "id": "d3dba6e8-a921-33ed-b745-d17bd0fabc2e",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -1284,6 +1236,54 @@
               }
             },
             {
+              "id": "df2355f1-daaf-335d-9f59-7e482cb524fa",
+              "name": "resources.rules.dlint-catastrophic-redos",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
+              },
+              "fullDescription": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.dlint-catastrophic-redos"
+                ]
+              }
+            },
+            {
+              "id": "d3dba6e8-a921-33ed-b745-d17bd0fabc2e",
+              "name": "resources.rules.dlint-catastrophic-redos",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
+              },
+              "fullDescription": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.dlint-catastrophic-redos"
+                ]
+              }
+            },
+            {
               "id": "abdcfd49-3237-3ca1-be13-13f662a20788",
               "name": "resources.rules.use-sys-exit",
               "shortDescription": {
@@ -1304,30 +1304,6 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.use-sys-exit"
-                ]
-              }
-            },
-            {
-              "id": "73c53470-ef27-3efa-b92d-b10a1d410a5f",
-              "name": "resources.rules.dangerous-subprocess-use",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
-              },
-              "fullDescription": {
-                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess](https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess)\n - [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)\n - [https://docs.python.org/3/library/shlex.html](https://docs.python.org/3/library/shlex.html)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dangerous-subprocess-use"
                 ]
               }
             },
@@ -1356,7 +1332,7 @@
               }
             },
             {
-              "id": "a06f1fc1-c75f-3d1d-bc5e-6eba83311799",
+              "id": "73c53470-ef27-3efa-b92d-b10a1d410a5f",
               "name": "resources.rules.dangerous-subprocess-use",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
@@ -1428,6 +1404,30 @@
               }
             },
             {
+              "id": "a06f1fc1-c75f-3d1d-bc5e-6eba83311799",
+              "name": "resources.rules.dangerous-subprocess-use",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
+              },
+              "fullDescription": {
+                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess](https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess)\n - [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)\n - [https://docs.python.org/3/library/shlex.html](https://docs.python.org/3/library/shlex.html)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.dangerous-subprocess-use"
+                ]
+              }
+            },
+            {
               "id": "126f0def-cca2-34b9-93e4-cd674caf912f",
               "name": "resources.rules.dangerous-subprocess-use",
               "shortDescription": {
@@ -1448,6 +1448,30 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.dangerous-subprocess-use"
+                ]
+              }
+            },
+            {
+              "id": "ff8662d7-0d15-35f3-bbb8-c14a4d505783",
+              "name": "resources.rules.return-not-in-function",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.return-not-in-function"
+              },
+              "fullDescription": {
+                "text": "`return` only makes sense inside a function"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "`return` only makes sense inside a function\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "`return` only makes sense inside a function\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.return-not-in-function"
                 ]
               }
             },
@@ -1500,7 +1524,7 @@
               }
             },
             {
-              "id": "ff8662d7-0d15-35f3-bbb8-c14a4d505783",
+              "id": "97deb323-c1e6-33f2-a9df-575398566e41",
               "name": "resources.rules.return-not-in-function",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.return-not-in-function"
@@ -1520,6 +1544,30 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.return-not-in-function"
+                ]
+              }
+            },
+            {
+              "id": "f90f76b3-5e69-311b-8603-bfd97c6d80ee",
+              "name": "resources.rules.use-sys-exit",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.use-sys-exit"
+              },
+              "fullDescription": {
+                "text": "Use `sys.exit` over the python shell `exit` built-in. `exit` is a helper for the interactive shell and may not be available on all Python implementations. https://stackoverflow.com/questions/6501121/difference-between-exit-and-sys-exit-in-python"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "Use `sys.exit` over the python shell `exit` built-in. `exit` is a helper for the interactive shell and may not be available on all Python implementations. https://stackoverflow.com/questions/6501121/difference-between-exit-and-sys-exit-in-python\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Use `sys.exit` over the python shell `exit` built-in. `exit` is a helper for the interactive shell and may not be available on all Python implementations. https://stackoverflow.com/questions/6501121/difference-between-exit-and-sys-exit-in-python\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.use-sys-exit"
                 ]
               }
             },
@@ -1548,30 +1596,6 @@
               }
             },
             {
-              "id": "97deb323-c1e6-33f2-a9df-575398566e41",
-              "name": "resources.rules.return-not-in-function",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.return-not-in-function"
-              },
-              "fullDescription": {
-                "text": "`return` only makes sense inside a function"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "`return` only makes sense inside a function\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "`return` only makes sense inside a function\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.return-not-in-function"
-                ]
-              }
-            },
-            {
               "id": "a359ee40-fb94-3ccc-a390-07ec7c92aa4a",
               "name": "resources.rules.arbitrary-sleep",
               "shortDescription": {
@@ -1596,7 +1620,7 @@
               }
             },
             {
-              "id": "f90f76b3-5e69-311b-8603-bfd97c6d80ee",
+              "id": "97a265a1-7136-3110-93ef-86d82399202d",
               "name": "resources.rules.use-sys-exit",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.use-sys-exit"
@@ -1644,7 +1668,7 @@
               }
             },
             {
-              "id": "97a265a1-7136-3110-93ef-86d82399202d",
+              "id": "130cac40-d037-31a5-a43c-892bbd5903a0",
               "name": "resources.rules.use-sys-exit",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.use-sys-exit"
@@ -1688,30 +1712,6 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.arbitrary-sleep"
-                ]
-              }
-            },
-            {
-              "id": "130cac40-d037-31a5-a43c-892bbd5903a0",
-              "name": "resources.rules.use-sys-exit",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.use-sys-exit"
-              },
-              "fullDescription": {
-                "text": "Use `sys.exit` over the python shell `exit` built-in. `exit` is a helper for the interactive shell and may not be available on all Python implementations. https://stackoverflow.com/questions/6501121/difference-between-exit-and-sys-exit-in-python"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "Use `sys.exit` over the python shell `exit` built-in. `exit` is a helper for the interactive shell and may not be available on all Python implementations. https://stackoverflow.com/questions/6501121/difference-between-exit-and-sys-exit-in-python\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Use `sys.exit` over the python shell `exit` built-in. `exit` is a helper for the interactive shell and may not be available on all Python implementations. https://stackoverflow.com/questions/6501121/difference-between-exit-and-sys-exit-in-python\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.use-sys-exit"
                 ]
               }
             }
@@ -1789,37 +1789,6 @@
           "properties": {}
         },
         {
-          "ruleId": "bfea9e5c-8243-3c3f-a376-c077f4b255b0",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Use 'WORKDIR' instead of 'RUN cd ...'. Using 'RUN cd ...' may not work as expected in a conatiner."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "Dockerfile",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 24,
-                  "startColumn": 1,
-                  "endLine": 25,
-                  "endColumn": 7,
-                  "snippet": {
-                    "text": "RUN git clone https://github.com/SecurityLab-UCD/AFLplusplus.git --branch=irfuzzer-0.2 --depth=1 $AFL && \\\n    cd $AFL && \\"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "8d367e50e35761b926f24b347a3d048bb3d45a6c6ee8ccc7b4ff393ac2c97727d657193320b7c89a39455a227b43d9d617dd00cab4ff4da6b36962a79493dcf2_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "32e832d8-6185-31ad-86e0-703df5a5424f",
           "kind": "fail",
           "level": "warning",
@@ -1847,6 +1816,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "8d367e50e35761b926f24b347a3d048bb3d45a6c6ee8ccc7b4ff393ac2c97727d657193320b7c89a39455a227b43d9d617dd00cab4ff4da6b36962a79493dcf2_2"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "bfea9e5c-8243-3c3f-a376-c077f4b255b0",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Use 'WORKDIR' instead of 'RUN cd ...'. Using 'RUN cd ...' may not work as expected in a conatiner."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 1,
+                  "endLine": 25,
+                  "endColumn": 7,
+                  "snippet": {
+                    "text": "RUN git clone https://github.com/SecurityLab-UCD/AFLplusplus.git --branch=irfuzzer-0.2 --depth=1 $AFL && \\\n    cd $AFL && \\"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "8d367e50e35761b926f24b347a3d048bb3d45a6c6ee8ccc7b4ff393ac2c97727d657193320b7c89a39455a227b43d9d617dd00cab4ff4da6b36962a79493dcf2_0"
           },
           "properties": {}
         },
@@ -1913,6 +1913,37 @@
           "properties": {}
         },
         {
+          "ruleId": "3b4d70e2-fb7c-33fd-9e17-a94ae1a1ad1a",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Truncation errors occur when a primitive is cast to a primitive of a  smaller size and data is lost in the conversion. The value cannot be  trusted and the application will be in an undefined state."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "llvm-isel-afl/afl-driver.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 91,
+                  "startColumn": 22,
+                  "endLine": 91,
+                  "endColumn": 59,
+                  "snippet": {
+                    "text": "static volatile char suppress_warning2 = AFL_PERSISTENT[0];"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "b55416c636b32a0d5607d0bb269388ba2ebc5e6dd77d6b3a9c0754786b01e0f1fae4148eaea9451cdd80acbb5fda1e506e42c82600a4d9fee830e9832a546700_0"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "779fab94-fe24-324e-925f-1f9bebe0b034",
           "kind": "fail",
           "level": "warning",
@@ -1944,11 +1975,11 @@
           "properties": {}
         },
         {
-          "ruleId": "3b4d70e2-fb7c-33fd-9e17-a94ae1a1ad1a",
+          "ruleId": "75f7a30b-ffe5-3b9c-8526-f3cbaa53b573",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "Truncation errors occur when a primitive is cast to a primitive of a  smaller size and data is lost in the conversion. The value cannot be  trusted and the application will be in an undefined state."
+            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
           },
           "locations": [
             {
@@ -1958,19 +1989,19 @@
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 91,
-                  "startColumn": 22,
-                  "endLine": 91,
-                  "endColumn": 59,
+                  "startLine": 124,
+                  "startColumn": 7,
+                  "endLine": 124,
+                  "endColumn": 53,
                   "snippet": {
-                    "text": "static volatile char suppress_warning2 = AFL_PERSISTENT[0];"
+                    "text": "      getenv(\"AFL_DRIVER_STDERR_DUPLICATE_FILENAME\");"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "b55416c636b32a0d5607d0bb269388ba2ebc5e6dd77d6b3a9c0754786b01e0f1fae4148eaea9451cdd80acbb5fda1e506e42c82600a4d9fee830e9832a546700_0"
+            "matchBasedId/v1": "0113ac951f8423178768753cc852128681c5b57418aa5c65c04669e62384716e83fafa273482670b228e489111b02565033e3c7a1eef778375dc9d02aba7ff38_1"
           },
           "properties": {}
         },
@@ -2037,37 +2068,6 @@
           "properties": {}
         },
         {
-          "ruleId": "75f7a30b-ffe5-3b9c-8526-f3cbaa53b573",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "llvm-isel-afl/afl-driver.cpp",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 124,
-                  "startColumn": 7,
-                  "endLine": 124,
-                  "endColumn": 53,
-                  "snippet": {
-                    "text": "      getenv(\"AFL_DRIVER_STDERR_DUPLICATE_FILENAME\");"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "0113ac951f8423178768753cc852128681c5b57418aa5c65c04669e62384716e83fafa273482670b228e489111b02565033e3c7a1eef778375dc9d02aba7ff38_1"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "00baedf9-6795-3089-af62-b2afd80e6a82",
           "kind": "fail",
           "level": "warning",
@@ -2099,7 +2099,7 @@
           "properties": {}
         },
         {
-          "ruleId": "7e07bb5e-08d6-3a9e-8542-e64baf6dd16c",
+          "ruleId": "e499f635-a8c3-3259-b42d-1b61a49773fb",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -2113,19 +2113,19 @@
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 143,
-                  "startColumn": 16,
-                  "endLine": 143,
-                  "endColumn": 39,
+                  "startLine": 159,
+                  "startColumn": 27,
+                  "endLine": 159,
+                  "endColumn": 49,
                   "snippet": {
-                    "text": "  FILE *temp = fopen(\"/dev/null\", \"w\");"
+                    "text": "  FILE *new_output_file = fdopen(output_fd, \"w\");"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "f28a5261255bb77f859571fd265092b980e7eda663e111f88c6791a89bcff9d0e7b378fc10016bc77029a1acd6b566c4094fdfbe1f39c8b3c07c67372dbe8d0b_0"
+            "matchBasedId/v1": "6a0ecb15ca7bcd250d84aff90e372a8f68bdb4e8c6cbb2319af256f6fea9bd14522f98c1d710ef33f830569b05f262445b14decfdc924235f3673fdb9b49d982_0"
           },
           "properties": {}
         },
@@ -2161,11 +2161,11 @@
           "properties": {}
         },
         {
-          "ruleId": "9b276a96-24e2-301c-9350-b56975553f23",
+          "ruleId": "7e07bb5e-08d6-3a9e-8542-e64baf6dd16c",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "The atoi(), atol(), atof(), and similar functions don't handle errors. They don't check for integer overflow and can return a negative value.  They have undefined behavior if the value of the result cannot be  represented. They return 0 (or 0.0) if the string does not represent  an integer (or decimal), which is indistinguishable from a correctly  formatted, zero-denoting input string."
+            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
           },
           "locations": [
             {
@@ -2175,19 +2175,19 @@
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 181,
-                  "startColumn": 17,
-                  "endLine": 181,
-                  "endColumn": 34,
+                  "startLine": 143,
+                  "startColumn": 16,
+                  "endLine": 143,
+                  "endColumn": 39,
                   "snippet": {
-                    "text": "  int fd_mask = atoi(fd_mask_str);"
+                    "text": "  FILE *temp = fopen(\"/dev/null\", \"w\");"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "682a3153e9de1c4125662e4e354d1fab9b75b5049a563036b97263ff2ce7e2286d1bea78df88c91ed12842ded35a64510d83c0fe15aa91f2889f51b6e2d61d0f_0"
+            "matchBasedId/v1": "f28a5261255bb77f859571fd265092b980e7eda663e111f88c6791a89bcff9d0e7b378fc10016bc77029a1acd6b566c4094fdfbe1f39c8b3c07c67372dbe8d0b_0"
           },
           "properties": {}
         },
@@ -2223,11 +2223,11 @@
           "properties": {}
         },
         {
-          "ruleId": "e499f635-a8c3-3259-b42d-1b61a49773fb",
+          "ruleId": "9b276a96-24e2-301c-9350-b56975553f23",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
+            "text": "The atoi(), atol(), atof(), and similar functions don't handle errors. They don't check for integer overflow and can return a negative value.  They have undefined behavior if the value of the result cannot be  represented. They return 0 (or 0.0) if the string does not represent  an integer (or decimal), which is indistinguishable from a correctly  formatted, zero-denoting input string."
           },
           "locations": [
             {
@@ -2237,19 +2237,19 @@
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 159,
-                  "startColumn": 27,
-                  "endLine": 159,
-                  "endColumn": 49,
+                  "startLine": 181,
+                  "startColumn": 17,
+                  "endLine": 181,
+                  "endColumn": 34,
                   "snippet": {
-                    "text": "  FILE *new_output_file = fdopen(output_fd, \"w\");"
+                    "text": "  int fd_mask = atoi(fd_mask_str);"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "6a0ecb15ca7bcd250d84aff90e372a8f68bdb4e8c6cbb2319af256f6fea9bd14522f98c1d710ef33f830569b05f262445b14decfdc924235f3673fdb9b49d982_0"
+            "matchBasedId/v1": "682a3153e9de1c4125662e4e354d1fab9b75b5049a563036b97263ff2ce7e2286d1bea78df88c91ed12842ded35a64510d83c0fe15aa91f2889f51b6e2d61d0f_0"
           },
           "properties": {}
         },
@@ -2316,6 +2316,37 @@
           "properties": {}
         },
         {
+          "ruleId": "69e68de7-20ae-37fd-96ac-5c701762a1b1",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "llvm-isel-afl/afl-driver.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 259,
+                  "startColumn": 22,
+                  "endLine": 259,
+                  "endColumn": 50,
+                  "snippet": {
+                    "text": "    char *tbl_size = getenv(\"MATCHER_TABLE_SIZE\");"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "0113ac951f8423178768753cc852128681c5b57418aa5c65c04669e62384716e83fafa273482670b228e489111b02565033e3c7a1eef778375dc9d02aba7ff38_4"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "6a9e5457-16be-3809-8651-b5b0b841fa47",
           "kind": "fail",
           "level": "warning",
@@ -2347,11 +2378,11 @@
           "properties": {}
         },
         {
-          "ruleId": "69e68de7-20ae-37fd-96ac-5c701762a1b1",
+          "ruleId": "c4533ad4-2bce-3be6-b2c8-3ac9bcb7fae8",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
+            "text": "The atoi(), atol(), atof(), and similar functions don't handle errors. They don't check for integer overflow and can return a negative value.  They have undefined behavior if the value of the result cannot be  represented. They return 0 (or 0.0) if the string does not represent  an integer (or decimal), which is indistinguishable from a correctly  formatted, zero-denoting input string."
           },
           "locations": [
             {
@@ -2361,19 +2392,19 @@
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 259,
-                  "startColumn": 22,
-                  "endLine": 259,
-                  "endColumn": 50,
+                  "startLine": 278,
+                  "startColumn": 30,
+                  "endLine": 278,
+                  "endColumn": 43,
                   "snippet": {
-                    "text": "    char *tbl_size = getenv(\"MATCHER_TABLE_SIZE\");"
+                    "text": "  else if (argc == 2 && (N = atoi(argv[1])) > 0)"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "0113ac951f8423178768753cc852128681c5b57418aa5c65c04669e62384716e83fafa273482670b228e489111b02565033e3c7a1eef778375dc9d02aba7ff38_4"
+            "matchBasedId/v1": "682a3153e9de1c4125662e4e354d1fab9b75b5049a563036b97263ff2ce7e2286d1bea78df88c91ed12842ded35a64510d83c0fe15aa91f2889f51b6e2d61d0f_2"
           },
           "properties": {}
         },
@@ -2440,37 +2471,6 @@
           "properties": {}
         },
         {
-          "ruleId": "c4533ad4-2bce-3be6-b2c8-3ac9bcb7fae8",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "The atoi(), atol(), atof(), and similar functions don't handle errors. They don't check for integer overflow and can return a negative value.  They have undefined behavior if the value of the result cannot be  represented. They return 0 (or 0.0) if the string does not represent  an integer (or decimal), which is indistinguishable from a correctly  formatted, zero-denoting input string."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "llvm-isel-afl/afl-driver.cpp",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 278,
-                  "startColumn": 30,
-                  "endLine": 278,
-                  "endColumn": 43,
-                  "snippet": {
-                    "text": "  else if (argc == 2 && (N = atoi(argv[1])) > 0)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "682a3153e9de1c4125662e4e354d1fab9b75b5049a563036b97263ff2ce7e2286d1bea78df88c91ed12842ded35a64510d83c0fe15aa91f2889f51b6e2d61d0f_2"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "b418f956-0b5f-32bd-9146-66ae47792f3a",
           "kind": "fail",
           "level": "warning",
@@ -2533,37 +2533,6 @@
           "properties": {}
         },
         {
-          "ruleId": "bd4412d6-8420-303f-8051-ffe2c47f3078",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "llvm-isel-afl/llvm-isel-fuzzer.cpp",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 88,
-                  "startColumn": 3,
-                  "endLine": 88,
-                  "endColumn": 25,
-                  "snippet": {
-                    "text": "  InitializeAllTargets();"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "51cc34095fc36e6484598a851d7f24b97debe69f0f12fe6d43550b526413731b303de3c6820fcff329659e7ef6339d5be3fe3a848c099e02d4cf04390b7ff846_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "5b1a968a-e604-3929-b5a2-4b73fe2bfd31",
           "kind": "fail",
           "level": "warning",
@@ -2595,6 +2564,37 @@
           "properties": {}
         },
         {
+          "ruleId": "bd4412d6-8420-303f-8051-ffe2c47f3078",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "llvm-isel-afl/llvm-isel-fuzzer.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 88,
+                  "startColumn": 3,
+                  "endLine": 88,
+                  "endColumn": 25,
+                  "snippet": {
+                    "text": "  InitializeAllTargets();"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "51cc34095fc36e6484598a851d7f24b97debe69f0f12fe6d43550b526413731b303de3c6820fcff329659e7ef6339d5be3fe3a848c099e02d4cf04390b7ff846_0"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "34c3427a-feda-3e1b-89e3-a53c8db88506",
           "kind": "fail",
           "level": "warning",
@@ -2622,37 +2622,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "716b82821318893d7e30897ad86e4fd390aad65b69b673d9d428501b614b47caa7319b57d15bdb2c6c243675df7cfff8cfa81f9874b6df04f74e6b8833f9ed24_0"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "76711e88-590a-3f23-8210-9001a1077abf",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "The rand() PRNG should not be used in applications intended to be  portable when good randomness is needed. Instead, the use of random()  is recommended."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "mutator/src/afl-mutator.c",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 75,
-                  "startColumn": 73,
-                  "endLine": 75,
-                  "endColumn": 79,
-                  "snippet": {
-                    "text": "      LLVMFuzzerCustomMutator(mutator->mutator_buf, buf_size, max_size, rand());"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "716b82821318893d7e30897ad86e4fd390aad65b69b673d9d428501b614b47caa7319b57d15bdb2c6c243675df7cfff8cfa81f9874b6df04f74e6b8833f9ed24_1"
           },
           "properties": {}
         },
@@ -2715,6 +2684,68 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "b3942a4cbcb435bb7e9df087f6c3e138f5485c8e14ce7a2690fe993955002cd573f63702b4a0bd7c9300e092d1f42e4a345a7478c07cfa923f38d7fa6e293ef3_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "76711e88-590a-3f23-8210-9001a1077abf",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "The rand() PRNG should not be used in applications intended to be  portable when good randomness is needed. Instead, the use of random()  is recommended."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "mutator/src/afl-mutator.c",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 75,
+                  "startColumn": 73,
+                  "endLine": 75,
+                  "endColumn": 79,
+                  "snippet": {
+                    "text": "      LLVMFuzzerCustomMutator(mutator->mutator_buf, buf_size, max_size, rand());"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "716b82821318893d7e30897ad86e4fd390aad65b69b673d9d428501b614b47caa7319b57d15bdb2c6c243675df7cfff8cfa81f9874b6df04f74e6b8833f9ed24_1"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "d66d0ad3-f715-3641-b5f3-a8576be019d2",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "The rand() PRNG should not be used in applications intended to be  portable when good randomness is needed. Instead, the use of random()  is recommended."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "mutator/src/main.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 65,
+                  "startColumn": 25,
+                  "endLine": 65,
+                  "endColumn": 31,
+                  "snippet": {
+                    "text": "    unsigned int Seed = rand();"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "37b618ad10ae261a5244dcd1e96b4400c26c6d53647026184a20f401ba96864e5d68a8514a07157d44fec261cdd178160be30fa6b4df36f09385345f8346a877_1"
           },
           "properties": {}
         },
@@ -2812,7 +2843,7 @@
           "properties": {}
         },
         {
-          "ruleId": "d66d0ad3-f715-3641-b5f3-a8576be019d2",
+          "ruleId": "61e20618-b2d4-308b-8563-a3e9ea97f260",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -2822,23 +2853,23 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "mutator/src/main.cpp",
+                  "uri": "mutator/src/mutator.cpp",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 65,
-                  "startColumn": 25,
-                  "endLine": 65,
-                  "endColumn": 31,
+                  "startLine": 134,
+                  "startColumn": 5,
+                  "endLine": 134,
+                  "endColumn": 16,
                   "snippet": {
-                    "text": "    unsigned int Seed = rand();"
+                    "text": "    srand(Seed);"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "37b618ad10ae261a5244dcd1e96b4400c26c6d53647026184a20f401ba96864e5d68a8514a07157d44fec261cdd178160be30fa6b4df36f09385345f8346a877_1"
+            "matchBasedId/v1": "846ff668142af9f1657e037a34f319d5302ec1af7d712104aebfda1356b17b96c09312e85af92e3f7ecbbfc633572801d9d903c845f2eaa98345ce13e0079161_0"
           },
           "properties": {}
         },
@@ -2905,11 +2936,11 @@
           "properties": {}
         },
         {
-          "ruleId": "61e20618-b2d4-308b-8563-a3e9ea97f260",
+          "ruleId": "a3148619-3f7f-3524-97e8-807d9156f35a",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "The rand() PRNG should not be used in applications intended to be  portable when good randomness is needed. Instead, the use of random()  is recommended."
+            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
           },
           "locations": [
             {
@@ -2919,19 +2950,19 @@
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 134,
+                  "startLine": 156,
                   "startColumn": 5,
-                  "endLine": 134,
-                  "endColumn": 16,
+                  "endLine": 156,
+                  "endColumn": 35,
                   "snippet": {
-                    "text": "    srand(Seed);"
+                    "text": "    memcpy(Data, NewData, NewSize);"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "846ff668142af9f1657e037a34f319d5302ec1af7d712104aebfda1356b17b96c09312e85af92e3f7ecbbfc633572801d9d903c845f2eaa98345ce13e0079161_0"
+            "matchBasedId/v1": "1997de4ae35b9c87384d49f8e64cca6424b4c17f5e2d9ccfe32619c005f83586c8f7c5873d7ee37e661903d356241e80f891ec632b41fb81f0aed0d80c1df42f_0"
           },
           "properties": {}
         },
@@ -2998,33 +3029,33 @@
           "properties": {}
         },
         {
-          "ruleId": "a3148619-3f7f-3524-97e8-807d9156f35a",
+          "ruleId": "2b168f9f-e73c-3e0d-9df9-b94323e170fd",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
+            "text": "Regex `r\"^ +0x[0-9a-f]+: .+ = .+\\n$\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "mutator/src/mutator.cpp",
+                  "uri": "scripts/classify.py",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 156,
-                  "startColumn": 5,
-                  "endLine": 156,
-                  "endColumn": 35,
+                  "startLine": 81,
+                  "startColumn": 37,
+                  "endLine": 81,
+                  "endColumn": 87,
                   "snippet": {
-                    "text": "    memcpy(Data, NewData, NewSize);"
+                    "text": "            if curr_line == \"\\n\" or re.match(r\"^ +0x[0-9a-f]+: .+ = .+\\n$\", curr_line):"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "1997de4ae35b9c87384d49f8e64cca6424b4c17f5e2d9ccfe32619c005f83586c8f7c5873d7ee37e661903d356241e80f891ec632b41fb81f0aed0d80c1df42f_0"
+            "matchBasedId/v1": "c9d131d9c4bf43897032674eea6b3a441aaffacc3beb87b8fb6aa3dc1fa520a17bfa66ffc838c8bc3e8dacfe6954867457056890067f37789442404948aba0df_0"
           },
           "properties": {}
         },
@@ -3060,37 +3091,6 @@
           "properties": {}
         },
         {
-          "ruleId": "2b168f9f-e73c-3e0d-9df9-b94323e170fd",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\"^ +0x[0-9a-f]+: .+ = .+\\n$\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "scripts/classify.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 81,
-                  "startColumn": 37,
-                  "endLine": 81,
-                  "endColumn": 87,
-                  "snippet": {
-                    "text": "            if curr_line == \"\\n\" or re.match(r\"^ +0x[0-9a-f]+: .+ = .+\\n$\", curr_line):"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "c9d131d9c4bf43897032674eea6b3a441aaffacc3beb87b8fb6aa3dc1fa520a17bfa66ffc838c8bc3e8dacfe6954867457056890067f37789442404948aba0df_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "cf2d9a2e-d63e-38e0-98eb-b9e82b37b826",
           "kind": "fail",
           "level": "warning",
@@ -3122,37 +3122,6 @@
           "properties": {}
         },
         {
-          "ruleId": "b0a1c40f-85c7-3ae7-bdd4-bc3b2b494f59",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\"%[0-9]+\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "scripts/classify.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 92,
-                  "startColumn": 13,
-                  "endLine": 92,
-                  "endColumn": 55,
-                  "snippet": {
-                    "text": "            re.sub(r\"%[0-9]+\", \"%_\", self.message_raw)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "7c2dfeed0ffe33a4dad46a2bdbebcbf0ba5a00514c738e2b3faf175c30f7732b5943a79fe0c7704caf874a63726167f3dcabfb45c7d7e198338b4db6e769e552_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "355d76af-49e3-3fa2-ba26-1f55e02e32e9",
           "kind": "fail",
           "level": "warning",
@@ -3180,6 +3149,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "ad6d7274f7653c47b0cff2281b40247b080d3b5c83cad3ffdad10a53fb9b0631499f68033e0b574dcf3b1f0c58d74138a0af7b81b27a0e68d459ada8a127d6cd_1"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "b0a1c40f-85c7-3ae7-bdd4-bc3b2b494f59",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r\"%[0-9]+\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/classify.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 92,
+                  "startColumn": 13,
+                  "endLine": 92,
+                  "endColumn": 55,
+                  "snippet": {
+                    "text": "            re.sub(r\"%[0-9]+\", \"%_\", self.message_raw)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "7c2dfeed0ffe33a4dad46a2bdbebcbf0ba5a00514c738e2b3faf175c30f7732b5943a79fe0c7704caf874a63726167f3dcabfb45c7d7e198338b4db6e769e552_0"
           },
           "properties": {}
         },
@@ -3246,37 +3246,6 @@
           "properties": {}
         },
         {
-          "ruleId": "df2355f1-daaf-335d-9f59-7e482cb524fa",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\" *[0-9]+\\.\\tRunning pass \\'([A-Za-z0-9 ]+)\\'\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "scripts/classify.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 117,
-                  "startColumn": 30,
-                  "endLine": 119,
-                  "endColumn": 22,
-                  "snippet": {
-                    "text": "                    match := re.match(\n                        r\" *[0-9]+\\.\\tRunning pass \\'([A-Za-z0-9 ]+)\\'\", curr_line\n                    )"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "0117c28f19d31a763ba018c9c9cc81bad0ed095a8019a7e0d87637577829b9b42d13b6f908acb818df0c868b312f0d0845fa46067d4fa3d7b2b4479608dece3e_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "91dd3b72-df9a-34cf-be09-ccf403a55939",
           "kind": "fail",
           "level": "warning",
@@ -3304,37 +3273,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "e2f5b28b130d0788f48a0bcce58ce003920b606b20aefabd4d4bff19661550798ab3c04c5140b4807fdd9f68c04454063bdc72593407f3c0c63dc853ae3af3f9_0"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "d3dba6e8-a921-33ed-b745-d17bd0fabc2e",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\"LLVM ERROR: Cannot select:.+ = ([a-zA-Z0-9_:]+(<.+>)?)\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "scripts/classify.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 145,
-                  "startColumn": 21,
-                  "endLine": 148,
-                  "endColumn": 14,
-                  "snippet": {
-                    "text": "            match = re.match(\n                r\"LLVM ERROR: Cannot select:.+ = ([a-zA-Z0-9_:]+(<.+>)?)\",\n                message_lines[0],\n            )"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "54d61b5fb6b316cab03c8c721eb9547e9e93bdac9ea7c6b87ac8654071a036cee7c3028d0b187867e52601bfd5918ca169861c56c890736b56c05602750f8bda_0"
           },
           "properties": {}
         },
@@ -3370,6 +3308,68 @@
           "properties": {}
         },
         {
+          "ruleId": "df2355f1-daaf-335d-9f59-7e482cb524fa",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r\" *[0-9]+\\.\\tRunning pass \\'([A-Za-z0-9 ]+)\\'\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/classify.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 117,
+                  "startColumn": 30,
+                  "endLine": 119,
+                  "endColumn": 22,
+                  "snippet": {
+                    "text": "                    match := re.match(\n                        r\" *[0-9]+\\.\\tRunning pass \\'([A-Za-z0-9 ]+)\\'\", curr_line\n                    )"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "0117c28f19d31a763ba018c9c9cc81bad0ed095a8019a7e0d87637577829b9b42d13b6f908acb818df0c868b312f0d0845fa46067d4fa3d7b2b4479608dece3e_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "d3dba6e8-a921-33ed-b745-d17bd0fabc2e",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r\"LLVM ERROR: Cannot select:.+ = ([a-zA-Z0-9_:]+(<.+>)?)\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/classify.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 145,
+                  "startColumn": 21,
+                  "endLine": 148,
+                  "endColumn": 14,
+                  "snippet": {
+                    "text": "            match = re.match(\n                r\"LLVM ERROR: Cannot select:.+ = ([a-zA-Z0-9_:]+(<.+>)?)\",\n                message_lines[0],\n            )"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "54d61b5fb6b316cab03c8c721eb9547e9e93bdac9ea7c6b87ac8654071a036cee7c3028d0b187867e52601bfd5918ca169861c56c890736b56c05602750f8bda_0"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "abdcfd49-3237-3ca1-be13-13f662a20788",
           "kind": "fail",
           "level": "warning",
@@ -3397,37 +3397,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "c1d35b9cdc03c252f7fb941e9eeab2e7056dbdf723781b59ad7f957e6bdaaf23f53eddea55ec15d076e7eb94be4391fc9bf8f99ccbfd7bc67109973ac702204b_0"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "73c53470-ef27-3efa-b92d-b10a1d410a5f",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Detected subprocess function 'Popen' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "scripts/classify.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 273,
-                  "startColumn": 46,
-                  "endLine": 277,
-                  "endColumn": 10,
-                  "snippet": {
-                    "text": "        subprocess_creator=lambda file_name: subprocess.Popen(\n            cmd + [os.path.join(input_dir, file_name)],\n            stdout=subprocess.DEVNULL,\n            stderr=open(os.path.join(temp_dir, file_name + \".stderr\"), \"w\"),\n        ),"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "1bd17d07658d921a44182ee9ac9d569a9a95f13103da5580905a9d8a17648e81a0a10b1aee5d4d1119d5b92226d0c0271123df9936520db9ef26041e2da8b9ea_0"
           },
           "properties": {}
         },
@@ -3463,33 +3432,33 @@
           "properties": {}
         },
         {
-          "ruleId": "a06f1fc1-c75f-3d1d-bc5e-6eba83311799",
+          "ruleId": "73c53470-ef27-3efa-b92d-b10a1d410a5f",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "Detected subprocess function 'run' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+            "text": "Detected subprocess function 'Popen' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "scripts/collect_matcher_table_size.py",
+                  "uri": "scripts/classify.py",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 51,
-                  "startColumn": 9,
-                  "endLine": 56,
-                  "endColumn": 6,
+                  "startLine": 273,
+                  "startColumn": 46,
+                  "endLine": 277,
+                  "endColumn": 10,
                   "snippet": {
-                    "text": "    p = subprocess.run(\n        args=args,\n        cwd=LLVM_AFL_BUILD_PATH,\n        stdout=subprocess.PIPE,\n        stderr=subprocess.PIPE,\n    )"
+                    "text": "        subprocess_creator=lambda file_name: subprocess.Popen(\n            cmd + [os.path.join(input_dir, file_name)],\n            stdout=subprocess.DEVNULL,\n            stderr=open(os.path.join(temp_dir, file_name + \".stderr\"), \"w\"),\n        ),"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "9fb50ac003abd445ff4fc63374c2ad8eba2ea6a031bb589ad9d2ff04770bbc5f449defc90b7576e3b215024910f2bf0fd1607f48ad5eca75c921658a52aa482e_0"
+            "matchBasedId/v1": "1bd17d07658d921a44182ee9ac9d569a9a95f13103da5580905a9d8a17648e81a0a10b1aee5d4d1119d5b92226d0c0271123df9936520db9ef26041e2da8b9ea_0"
           },
           "properties": {}
         },
@@ -3556,6 +3525,37 @@
           "properties": {}
         },
         {
+          "ruleId": "a06f1fc1-c75f-3d1d-bc5e-6eba83311799",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Detected subprocess function 'run' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/collect_matcher_table_size.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 9,
+                  "endLine": 56,
+                  "endColumn": 6,
+                  "snippet": {
+                    "text": "    p = subprocess.run(\n        args=args,\n        cwd=LLVM_AFL_BUILD_PATH,\n        stdout=subprocess.PIPE,\n        stderr=subprocess.PIPE,\n    )"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "9fb50ac003abd445ff4fc63374c2ad8eba2ea6a031bb589ad9d2ff04770bbc5f449defc90b7576e3b215024910f2bf0fd1607f48ad5eca75c921658a52aa482e_0"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "126f0def-cca2-34b9-93e4-cd674caf912f",
           "kind": "fail",
           "level": "warning",
@@ -3583,6 +3583,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "211b24dcfd7b276a73a801a36c5386434741f00cd86ea4f176a1590f3903345c46cbdae2d0bcd9723da57e409ac3f560eb0148284f45406c2058cab209b4f66c_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "ff8662d7-0d15-35f3-bbb8-c14a4d505783",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "`return` only makes sense inside a function"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/combine_fuzzing_results.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 34,
+                  "startColumn": 48,
+                  "endLine": 34,
+                  "endColumn": 75,
+                  "snippet": {
+                    "text": "    \"fuzzed_long_enough\", lambda expr_info, _: expr_info.run_time < 259000"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "c399b4308487e6831adc6e98d9749062f8309d9ed95881d3efb6682e9152cd0a8f048e2f2412fcf2421dff3daf087b589781f28d609ba55b1dbc5bc618c3bb12_2"
           },
           "properties": {}
         },
@@ -3649,68 +3680,6 @@
           "properties": {}
         },
         {
-          "ruleId": "ff8662d7-0d15-35f3-bbb8-c14a4d505783",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "`return` only makes sense inside a function"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "scripts/combine_fuzzing_results.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 34,
-                  "startColumn": 48,
-                  "endLine": 34,
-                  "endColumn": 75,
-                  "snippet": {
-                    "text": "    \"fuzzed_long_enough\", lambda expr_info, _: expr_info.run_time < 259000"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "c399b4308487e6831adc6e98d9749062f8309d9ed95881d3efb6682e9152cd0a8f048e2f2412fcf2421dff3daf087b589781f28d609ba55b1dbc5bc618c3bb12_2"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "7a415f4e-8d19-32c7-9acc-5bf5de3f9975",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Use `sys.exit` over the python shell `exit` built-in. `exit` is a helper for the interactive shell and may not be available on all Python implementations. https://stackoverflow.com/questions/6501121/difference-between-exit-and-sys-exit-in-python"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "scripts/combine_fuzzing_results.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 94,
-                  "startColumn": 13,
-                  "endLine": 94,
-                  "endColumn": 20,
-                  "snippet": {
-                    "text": "            exit(1)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "98f1d49ebc323f39a816e1013842ac28fca1364448b7c60af61c9e50d0209d00790bfe653ec126c6e0c1b2354c886152a323fc99b3fd9e256f6c71a6c33184cb_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "97deb323-c1e6-33f2-a9df-575398566e41",
           "kind": "fail",
           "level": "warning",
@@ -3738,37 +3707,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "c399b4308487e6831adc6e98d9749062f8309d9ed95881d3efb6682e9152cd0a8f048e2f2412fcf2421dff3daf087b589781f28d609ba55b1dbc5bc618c3bb12_3"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "a359ee40-fb94-3ccc-a390-07ec7c92aa4a",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "time.sleep() call; did you mean to leave this in?"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "scripts/fuzz.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 364,
-                  "startColumn": 9,
-                  "endLine": 364,
-                  "endColumn": 17,
-                  "snippet": {
-                    "text": "        sleep(1)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "148927e2bf7442dcd8ddb855e593d1d22d177f672830a1e122dfaa1c6c43d3511cd38df97ab2c6cecd0e995ff36dfcd357f89afcbe06ab2bb4dd84ae375b92c8_0"
           },
           "properties": {}
         },
@@ -3804,7 +3742,7 @@
           "properties": {}
         },
         {
-          "ruleId": "179fc0a8-2a4c-305d-9258-f77d4ca2f0d4",
+          "ruleId": "7a415f4e-8d19-32c7-9acc-5bf5de3f9975",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -3814,13 +3752,13 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "scripts/fuzz.py",
+                  "uri": "scripts/combine_fuzzing_results.py",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 403,
+                  "startLine": 94,
                   "startColumn": 13,
-                  "endLine": 403,
+                  "endLine": 94,
                   "endColumn": 20,
                   "snippet": {
                     "text": "            exit(1)"
@@ -3830,7 +3768,38 @@
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "e7657f81ae4416c04fc61a58ec88e8cf41f6eab18f08692baf13df8b90447fb48f8eb701815348223e63938b769e8edd9c659e37b6bce4e7dc52d021a763363a_1"
+            "matchBasedId/v1": "98f1d49ebc323f39a816e1013842ac28fca1364448b7c60af61c9e50d0209d00790bfe653ec126c6e0c1b2354c886152a323fc99b3fd9e256f6c71a6c33184cb_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "a359ee40-fb94-3ccc-a390-07ec7c92aa4a",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "time.sleep() call; did you mean to leave this in?"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/fuzz.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 364,
+                  "startColumn": 9,
+                  "endLine": 364,
+                  "endColumn": 17,
+                  "snippet": {
+                    "text": "        sleep(1)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "148927e2bf7442dcd8ddb855e593d1d22d177f672830a1e122dfaa1c6c43d3511cd38df97ab2c6cecd0e995ff36dfcd357f89afcbe06ab2bb4dd84ae375b92c8_0"
           },
           "properties": {}
         },
@@ -3866,11 +3835,11 @@
           "properties": {}
         },
         {
-          "ruleId": "8e21f0d4-a69e-3385-a184-206885923b72",
+          "ruleId": "179fc0a8-2a4c-305d-9258-f77d4ca2f0d4",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "time.sleep() call; did you mean to leave this in?"
+            "text": "Use `sys.exit` over the python shell `exit` built-in. `exit` is a helper for the interactive shell and may not be available on all Python implementations. https://stackoverflow.com/questions/6501121/difference-between-exit-and-sys-exit-in-python"
           },
           "locations": [
             {
@@ -3880,19 +3849,19 @@
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 430,
-                  "startColumn": 5,
-                  "endLine": 430,
-                  "endColumn": 23,
+                  "startLine": 403,
+                  "startColumn": 13,
+                  "endLine": 403,
+                  "endColumn": 20,
                   "snippet": {
-                    "text": "    sleep(start_pause)"
+                    "text": "            exit(1)"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "ac2dbef50e3f3f5d8c9312f8bff03391b8ac4f2ad4cedafb3373639ee3c8d5b05e7ef2f847d401da0151fa7534f9c8f15918aef0fbb5757e9fdd47bbfd0b0b79_0"
+            "matchBasedId/v1": "e7657f81ae4416c04fc61a58ec88e8cf41f6eab18f08692baf13df8b90447fb48f8eb701815348223e63938b769e8edd9c659e37b6bce4e7dc52d021a763363a_1"
           },
           "properties": {}
         },
@@ -3924,6 +3893,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "4ee6907abcb68a65f4184d407f8cfc93bd1ccf89f237c240fea8c2962596510c7e7ef96b9488ffa0c90ead8948983cc2daa4dd93665f47033741f5f8e8cb5696_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "8e21f0d4-a69e-3385-a184-206885923b72",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "time.sleep() call; did you mean to leave this in?"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/fuzz.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 430,
+                  "startColumn": 5,
+                  "endLine": 430,
+                  "endColumn": 23,
+                  "snippet": {
+                    "text": "    sleep(start_pause)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "ac2dbef50e3f3f5d8c9312f8bff03391b8ac4f2ad4cedafb3373639ee3c8d5b05e7ef2f847d401da0151fa7534f9c8f15918aef0fbb5757e9fdd47bbfd0b0b79_0"
           },
           "properties": {}
         }
